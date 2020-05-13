@@ -1,0 +1,246 @@
+[2019-06-13 12:03:28 +0000] [25598] [CRITICAL] WORKER TIMEOUT (pid:25602)
+[2019-06-13 12:03:28 +0000] [25598] [CRITICAL] WORKER TIMEOUT (pid:25603)
+[2019-06-13 12:03:28 +0000] [25598] [CRITICAL] WORKER TIMEOUT (pid:25606)
+[2019-06-13 12:03:28 +0000] [25598] [CRITICAL] WORKER TIMEOUT (pid:25607)
+[2019-06-13 12:03:28 +0000] [25598] [CRITICAL] WORKER TIMEOUT (pid:25608)
+[2019-06-13 12:03:28 +0000] [25598] [CRITICAL] WORKER TIMEOUT (pid:25610)
+[2019-06-13 12:03:28 +0000] [25598] [CRITICAL] WORKER TIMEOUT (pid:25613)
+[2019-06-13 12:03:28 +0000] [25598] [CRITICAL] WORKER TIMEOUT (pid:25614)
+[2019-06-13 12:03:28 +0000] [25598] [CRITICAL] WORKER TIMEOUT (pid:25615)
+[2020-05-13 10:30:07 +0000] [24983] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/nrabb/.local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/nrabb/.local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/home/nrabb/.local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/nrabb/.local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/nrabb/.local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 48, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/home/nrabb/.local/lib/python2.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/nrabb/.local/lib/python2.7/site-packages/psiturk/experiment.py", line 89, in <module>
+    init_db()
+  File "/home/nrabb/.local/lib/python2.7/site-packages/psiturk/db.py", line 37, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/sql/schema.py", line 4321, in create_all
+    ddl.SchemaGenerator, self, checkfirst=checkfirst, tables=tables
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 2058, in _run_visitor
+    conn._run_visitor(visitorcallable, element, **kwargs)
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1627, in _run_visitor
+    visitorcallable(self.dialect, self, **kwargs).traverse_single(element)
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/sql/visitors.py", line 144, in traverse_single
+    return meth(obj, **kw)
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/sql/ddl.py", line 781, in visit_metadata
+    _is_metadata_operation=True,
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/sql/visitors.py", line 144, in traverse_single
+    return meth(obj, **kw)
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/sql/ddl.py", line 826, in visit_table
+    include_foreign_key_constraints,  # noqa
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 984, in execute
+    return meth(self, multiparams, params)
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/sql/ddl.py", line 72, in _execute_on_connection
+    return connection._execute_ddl(self, multiparams, params)
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1046, in _execute_ddl
+    compiled,
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1288, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1482, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) disk I/O error
+[SQL: 
+CREATE TABLE amt_hit (
+	hitid VARCHAR(128) NOT NULL, 
+	PRIMARY KEY (hitid)
+)
+
+]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2020-05-13 10:30:07 +0000] [24985] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/nrabb/.local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/nrabb/.local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/home/nrabb/.local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/nrabb/.local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/nrabb/.local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 48, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/home/nrabb/.local/lib/python2.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/nrabb/.local/lib/python2.7/site-packages/psiturk/experiment.py", line 89, in <module>
+    init_db()
+  File "/home/nrabb/.local/lib/python2.7/site-packages/psiturk/db.py", line 37, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/sql/schema.py", line 4321, in create_all
+    ddl.SchemaGenerator, self, checkfirst=checkfirst, tables=tables
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 2058, in _run_visitor
+    conn._run_visitor(visitorcallable, element, **kwargs)
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1627, in _run_visitor
+    visitorcallable(self.dialect, self, **kwargs).traverse_single(element)
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/sql/visitors.py", line 144, in traverse_single
+    return meth(obj, **kw)
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/sql/ddl.py", line 781, in visit_metadata
+    _is_metadata_operation=True,
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/sql/visitors.py", line 144, in traverse_single
+    return meth(obj, **kw)
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/sql/ddl.py", line 826, in visit_table
+    include_foreign_key_constraints,  # noqa
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 984, in execute
+    return meth(self, multiparams, params)
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/sql/ddl.py", line 72, in _execute_on_connection
+    return connection._execute_ddl(self, multiparams, params)
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1046, in _execute_ddl
+    compiled,
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1288, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1482, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) table amt_hit already exists
+[SQL: 
+CREATE TABLE amt_hit (
+	hitid VARCHAR(128) NOT NULL, 
+	PRIMARY KEY (hitid)
+)
+
+]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2020-05-13 10:30:07 +0000] [24984] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/nrabb/.local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/nrabb/.local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/home/nrabb/.local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/nrabb/.local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/nrabb/.local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 48, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/home/nrabb/.local/lib/python2.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/nrabb/.local/lib/python2.7/site-packages/psiturk/experiment.py", line 89, in <module>
+    init_db()
+  File "/home/nrabb/.local/lib/python2.7/site-packages/psiturk/db.py", line 37, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/sql/schema.py", line 4321, in create_all
+    ddl.SchemaGenerator, self, checkfirst=checkfirst, tables=tables
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 2058, in _run_visitor
+    conn._run_visitor(visitorcallable, element, **kwargs)
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1627, in _run_visitor
+    visitorcallable(self.dialect, self, **kwargs).traverse_single(element)
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/sql/visitors.py", line 144, in traverse_single
+    return meth(obj, **kw)
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/sql/ddl.py", line 781, in visit_metadata
+    _is_metadata_operation=True,
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/sql/visitors.py", line 144, in traverse_single
+    return meth(obj, **kw)
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/sql/ddl.py", line 826, in visit_table
+    include_foreign_key_constraints,  # noqa
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 984, in execute
+    return meth(self, multiparams, params)
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/sql/ddl.py", line 72, in _execute_on_connection
+    return connection._execute_ddl(self, multiparams, params)
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1046, in _execute_ddl
+    compiled,
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1288, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1482, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) table turkdemo already exists
+[SQL: 
+CREATE TABLE turkdemo (
+	uniqueid VARCHAR(128) NOT NULL, 
+	assignmentid VARCHAR(128) NOT NULL, 
+	workerid VARCHAR(128) NOT NULL, 
+	hitid VARCHAR(128) NOT NULL, 
+	ipaddress VARCHAR(128), 
+	browser VARCHAR(128), 
+	platform VARCHAR(128), 
+	language VARCHAR(128), 
+	cond INTEGER, 
+	counterbalance INTEGER, 
+	codeversion VARCHAR(128), 
+	beginhit DATETIME, 
+	beginexp DATETIME, 
+	endhit DATETIME, 
+	bonus FLOAT, 
+	status INTEGER, 
+	mode VARCHAR(128), 
+	datastring TEXT(4294967295), 
+	PRIMARY KEY (uniqueid)
+)
+
+]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2020-05-13 10:30:07 +0000] [24986] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/nrabb/.local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/nrabb/.local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/home/nrabb/.local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/nrabb/.local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/nrabb/.local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 48, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/home/nrabb/.local/lib/python2.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/nrabb/.local/lib/python2.7/site-packages/psiturk/experiment.py", line 89, in <module>
+    init_db()
+  File "/home/nrabb/.local/lib/python2.7/site-packages/psiturk/db.py", line 37, in init_db
+    Base.metadata.create_all(bind=engine)
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/sql/schema.py", line 4321, in create_all
+    ddl.SchemaGenerator, self, checkfirst=checkfirst, tables=tables
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 2058, in _run_visitor
+    conn._run_visitor(visitorcallable, element, **kwargs)
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1627, in _run_visitor
+    visitorcallable(self.dialect, self, **kwargs).traverse_single(element)
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/sql/visitors.py", line 144, in traverse_single
+    return meth(obj, **kw)
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/sql/ddl.py", line 781, in visit_metadata
+    _is_metadata_operation=True,
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/sql/visitors.py", line 144, in traverse_single
+    return meth(obj, **kw)
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/sql/ddl.py", line 826, in visit_table
+    include_foreign_key_constraints,  # noqa
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 984, in execute
+    return meth(self, multiparams, params)
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/sql/ddl.py", line 72, in _execute_on_connection
+    return connection._execute_ddl(self, multiparams, params)
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1046, in _execute_ddl
+    compiled,
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1288, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1482, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/nrabb/.local/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) disk I/O error
+[SQL: 
+CREATE TABLE amt_hit (
+	hitid VARCHAR(128) NOT NULL, 
+	PRIMARY KEY (hitid)
+)
+
+]
+(Background on this error at: http://sqlalche.me/e/e3q8)
