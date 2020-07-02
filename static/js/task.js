@@ -18,24 +18,10 @@ var myCounterbalance = counterbalance;
 
 var allowUnfilled = false;
 
-// NEW Levels!
-console.log("My condition is: " + myCondition);
-// Conditions
-// (time, 1st variable level, 2nd variable level)
-var c1 = [
-	[300, macgyver2],
-	[300, macgyver3],
-];
-
 // Selecting current user's levels
 var time = 300;
-var surveyConditionNames = ["macgyverA", "macgyverB"];
+var surveyConditionNames = ["myConditionA", "myConditionB"];
 var surveyConditionName = surveyConditionNames[myCondition % surveyConditionNames.length];
-
-// For identifying on which pages to run a puzzle
-var puzzlePages = [
-	"p02-simple.html",
-];
 
 // All possible pages to be preloaded
 var instructionPages = [
