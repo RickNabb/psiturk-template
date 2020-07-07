@@ -25,12 +25,14 @@ var surveyConditionName = surveyConditionNames[myCondition % surveyConditionName
 
 // All possible pages to be preloaded
 var instructionPages = [
-	"instructions/instruct-ready.html"
+	"instructions/instruct-1.html",
+	"instructions/instruct-2.html"
 ];
 
 // The actual order of stages
 var stages = [
-	"p01-intro.html",
+	"text-example.html",
+	"gif-example.html",
 	"demographics.html",
 	"postquestionnaire.html",
 ];
